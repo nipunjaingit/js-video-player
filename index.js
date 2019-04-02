@@ -42,6 +42,15 @@ function scrub(e){
     video.currentTime = scrubTime; 
 }
 
+function selectFile(){
+    var fileInput = document.querySelector('.file_multi_video')
+    var fileUrl = window.URL.createObjectURL(fileInput.files[0]);
+    var videoContainer = document.querySelector('.viewer')
+    videoContainer.setAttribute("src", fileUrl);
+    console.log(fileInput)
+    console.log(videoContainer)
+}
+
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton)

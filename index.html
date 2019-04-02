@@ -11,17 +11,26 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="player">
-        <video class="player__video viewer" src="11 - Custom HTML5 Video Player.mp4"></video>
-        <div class="player__controls">
-            <div class="progress">
-                <div class="progress__filled"></div>
+    <div class="row">
+        <form class="form">
+            <div class="file-upload-wrapper" data-text="Click to select your video">
+                <input name="file[]" type="file" class="file_multi_video" accept="video/*" onchange="selectFile()">
             </div>
-            <button class="player__button toggle" title="Toggle Play">►</button>
-            <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
-            <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
-            <button data-skip="-10" class="player__button"><< 10s</button>
-            <button data-skip="25" class="player__button">25s >></button>
+        </form>
+    </div>
+    <div class="row">
+        <div class="player">
+            <video class="player__video viewer"></video>
+            <div class="player__controls">
+                <div class="progress">
+                    <div class="progress__filled"></div>
+                </div>
+                <button class="player__button toggle" title="Toggle Play">►</button>
+                <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+                <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
+                <button data-skip="-10" class="player__button"><< 10s</button>
+                <button data-skip="25" class="player__button">25s >></button>
+            </div>
         </div>
     </div>
       
